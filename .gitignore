@@ -1,0 +1,5 @@
+# Cabal dist
+dist-newstyle
+
+# Vim swap files
+*.sw?
