@@ -11,12 +11,23 @@ score 'C' 'X' = 1 + 6
 score 'C' 'Y' = 2 + 0
 score 'C' 'Z' = 3 + 3
 
-lineScore :: String -> Int
-lineScore (l:' ':r:_) = score l r
-lineScore s           = error ("Illegal input: " ++ s)
+lineScore :: (Char -> Char -> Int) -> String -> Int
+lineScore sf  (l:' ':r:_) = sf l r
+lineScore _   s           = error ("Illegal input: " ++ s)
 
 solve02_1 :: String -> Int
-solve02_1 = sum . map lineScore . lines
+solve02_1 = sum . map (lineScore score) . lines
+
+score' :: Char -> Char -> Int
+score' 'A' 'X' = score 'A' 'Z'
+score' 'A' 'Y' = score 'A' 'X'
+score' 'A' 'Z' = score 'A' 'Y'
+score' 'B' 'X' = score 'B' 'X'
+score' 'B' 'Y' = score 'B' 'Y'
+score' 'B' 'Z' = score 'B' 'Z'
+score' 'C' 'X' = score 'C' 'Y'
+score' 'C' 'Y' = score 'C' 'Z'
+score' 'C' 'Z' = score 'C' 'X'
 
 solve02_2 :: String -> Int
-solve02_2 = undefined
+solve02_2 = sum . map (lineScore score') . lines
