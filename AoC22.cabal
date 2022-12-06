@@ -6,6 +6,7 @@ author:                 Mirko Westermeier
 
 library
   exposed-modules:      AoC.Day01.Solution
+                      , AoC.Day02.Solution
   build-depends:        base >=4
                       , extra
   hs-source-dirs:       src
