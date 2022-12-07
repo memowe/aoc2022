@@ -8,6 +8,7 @@ library
   exposed-modules:      AoC.Day01.Solution
                       , AoC.Day02.Solution
                       , AoC.Day03.Solution
+                      , AoC.Day04.Solution
   build-depends:        base >=4
                       , extra
                       , split
