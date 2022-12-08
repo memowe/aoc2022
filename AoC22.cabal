@@ -9,7 +9,9 @@ library
                       , AoC.Day02.Solution
                       , AoC.Day03.Solution
                       , AoC.Day04.Solution
+                      , AoC.Day05.Solution
   build-depends:        base >=4
+                      , containers
                       , extra
                       , split
   hs-source-dirs:       src
