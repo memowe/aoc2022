@@ -10,6 +10,7 @@ library
                       , AoC.Day03.Solution
                       , AoC.Day04.Solution
                       , AoC.Day05.Solution
+                      , AoC.Day06.Solution
   build-depends:        base >=4
                       , containers
                       , extra
